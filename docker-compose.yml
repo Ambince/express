@@ -1,0 +1,23 @@
+version: "3"
+services:
+
+  express:
+    image: express:latest
+    container_name: express
+    environment:
+      VIRTUAL_HOST: amence.xyz
+      VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: amence.xyz
+      LETSENCRYPT_EMAIL: paopaoxiaoyanjing@gmail.com
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    tty: true
+    command: npm start
+    networks:
+      - shared
+
+networks:
+  default:
+    external:
+      name: shared
