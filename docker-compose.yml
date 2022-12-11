@@ -5,9 +5,9 @@ services:
     image: express:latest
     container_name: express
     environment:
-      VIRTUAL_HOST: amence.xyz
+      VIRTUAL_HOST: react.amence.xyz
       VIRTUAL_PORT: 3000
-      LETSENCRYPT_HOST: amence.xyz
+      LETSENCRYPT_HOST: react.amence.xyz
       LETSENCRYPT_EMAIL: paopaoxiaoyanjing@gmail.com
     ports:
       - "3000:3000"
